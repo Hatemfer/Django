@@ -1,0 +1,24 @@
+{% extends 'film/base.html' %}
+
+{% block content %}
+    <div class="row" style="margin: auto 50px;">
+        <div class="col-md-6 mt-4">
+            <div >
+                <img src="{{films.img.url}}" style=" border: 2px solid black;"width="500px" height="500px" alt="">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="text-warning display-3">
+                {{films.libelle}}
+            </div>
+            <div class="text-danger ">
+               <strong>Prix: {{ films.prix}} DT </strong> 
+            </div>
+            <div>
+                {{films.description}}
+            </div><br>
+            <a href="#"><button class="btn btn-success">Acheter</button></a>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'magasin/base.html' %}
+{% block title %} Liste de Fournisseurs {% endblock title %}
+{% block content %}
+        <!-- all Fournisseurs -->
+	
+
+		<div id='Fournisseurs' style="text-align: center;margin-right: 15%;margin-left: 15%;margin-top: 20px;">
+			<div class="row  bg-light">
+				
+				<table class="table table-striped" style="text-align: center;margin-right: 15%;margin-left: 15%;margin-top: 20px;">
+					<thead>
+					  <tr>
+						<th scope="col">#</th>
+						<th scope="col">Nom:</th>
+						<th scope="col">email:</th>
+						<th scope="col">telephone:</th>
+						<th scope="col">adresse:</th>
+					  </tr>
+					</thead>
+					<tbody>
+					{% for fourn in Fournisseurs %}
+					  <tr>
+						<th scope="row">{{ fourn.id }}</th>
+						<td>{{fourn.nom}}</td>
+						<td>{{fourn.email}}</td>
+						<td>{{fourn.telephone}} </td>
+						<td>{{fourn.adresse}} </td>
+					  </tr>
+					  {% endfor %}
+					</tbody>
+				</table>				
+			</div>
+		</div>
+		<!--endAllfournisseur-->
+       {% endblock %}

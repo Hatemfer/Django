@@ -1,0 +1,35 @@
+{% extends 'film/base.html' %}
+{% block title %} Liste de Realisateurs {% endblock title %}
+{% block content %}
+        <!-- all Realisateurs -->
+	
+
+		<div id='Realisateurs' style="text-align: center;margin-right: 15%;margin-left: 15%;margin-top: 20px;">
+			<div class="row  bg-light">
+				
+				<table class="table table-striped" style="text-align: center;margin-right: 15%;margin-left: 15%;margin-top: 20px;">
+					<thead>
+					  <tr>
+						<th scope="col">#</th>
+						<th scope="col">Nom:</th>
+						<th scope="col">email:</th>
+						<th scope="col">telephone:</th>
+						<th scope="col">nationalite:</th>
+					  </tr>
+					</thead>
+					<tbody>
+					{% for reali in Realisateurs %}
+					  <tr>
+						<th scope="row">{{ reali.id }}</th>
+						<td>{{reali.nom}}</td>
+						<td>{{reali.email}}</td>
+						<td>{{reali.telephone}} </td>
+						<td>{{reali.nationalite}} </td>
+					  </tr>
+					  {% endfor %}
+					</tbody>
+				</table>				
+			</div>
+		</div>
+		<!--endAllRealisateurs-->
+       {% endblock %}

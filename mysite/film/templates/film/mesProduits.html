@@ -1,0 +1,23 @@
+{% extends 'film/base.html' %}
+{% block title %} Catalogue de produits {% endblock title %}
+{% block content %}
+<!-- body -->
+<div class="container-fluid mt-3">
+<div class="row">
+<!-- all products -->
+<div id='Film' class="col-lg-9 mx-auto">
+<div class="row mx-auto">
+{% for film in films %}
+<div id={{product.id}} style="width: 18rem;">
+<img src="{{product.img.url}}" alt="Card image cap">
+<div >
+<p >{{product.libelle}}</p>
+<p ><b>{{product.description}}</b></p>
+</div>
+</div>
+{% endfor %}
+</div>
+</div>
+</div>
+</div>
+{% endblock %}
